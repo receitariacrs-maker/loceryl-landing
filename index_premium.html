@@ -201,7 +201,7 @@
     /* ── HERO ── */
     .hero {
       background: linear-gradient(160deg, #FFF8EE 0%, #FBF6EC 55%, #F5E8CE 100%);
-      padding: 48px 0 0
+      padding: 32px 0
     }
 
     .hero-copy {
@@ -401,12 +401,12 @@
 
     /* ── SECTION WRAPPERS ── */
     .section {
-      padding: 64px 0
+      padding: 32px 0
     }
 
     @media(min-width:768px) {
       .section {
-        padding: 88px 0
+        padding: 32px 0
       }
     }
 
@@ -466,7 +466,7 @@
 
     .stats-bar {
       background: linear-gradient(135deg, #6B3211 0%, #8B4513 60%, #7A3D16 100%);
-      padding: 36px 0
+      padding: 32px 0
     }
 
     .urgency-bar {
@@ -482,7 +482,7 @@
     /* ── STATS BAR ── */
     .stats-bar {
       background: linear-gradient(135deg, #6B3211 0%, #8B4513 60%, #7A3D16 100%);
-      padding: 36px 0
+      padding: 32px 0
     }
 
     .stats-grid {
@@ -664,7 +664,7 @@
 
     /* ── APP SHOWCASE ── */
     .showcase-section {
-      padding: 0
+      padding: 32px 0
     }
 
     .showcase-img {
@@ -1414,7 +1414,7 @@
       background: linear-gradient(160deg, #F0E4CC 0%, #E8D5B0 100%);
       border-top: 2px solid var(--beige-border);
       border-bottom: 2px solid var(--beige-border);
-      padding: 36px 24px;
+      padding: 32px 0;
       text-align: center
     }
 
@@ -1449,7 +1449,7 @@
     /* ── FINAL CTA ── */
     .final-cta {
       background: linear-gradient(160deg, #6B3211 0%, #8B4513 45%, #5C2A0E 100%);
-      padding: 64px 0 56px;
+      padding: 32px 0;
       text-align: center
     }
 
@@ -2289,102 +2289,6 @@
       line-height: 1.5
     }
 
-    /* ── TWEAKS PANEL ── */
-    #tweaks-panel {
-      display: none;
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 999;
-      background: white;
-      border: 1px solid var(--beige-border);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: var(--shadow-lg);
-      width: 230px;
-      font-family: var(--font-body)
-    }
-
-    #tweaks-panel h4 {
-      font-size: calc(13px * var(--text-scale, 1));
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
-
-    .tw-close {
-      cursor: pointer;
-      font-size: calc(16px * var(--text-scale, 1));
-      color: var(--text-muted)
-    }
-
-    .tw-row {
-      margin-bottom: 12px
-    }
-
-    .tw-row label {
-      display: block;
-      font-size: calc(11px * var(--text-scale, 1));
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--text-label);
-      margin-bottom: 5px
-    }
-
-    .tw-row select {
-      width: 100%;
-      font-size: calc(12px * var(--text-scale, 1));
-      border: 1px solid var(--beige-border);
-      border-radius: 8px;
-      padding: 6px 8px;
-      background: var(--cream-light);
-      color: var(--text-dark)
-    }
-
-    .tw-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: space-between
-    }
-
-    .tw-toggle label {
-      margin-bottom: 0
-    }
-
-    .tw-switch {
-      width: 36px;
-      height: 20px;
-      background: var(--beige-border);
-      border-radius: 20px;
-      position: relative;
-      cursor: pointer;
-      transition: background .2s
-    }
-
-    .tw-switch.on {
-      background: var(--brown-primary)
-    }
-
-    .tw-switch::after {
-      content: '';
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      background: white;
-      border-radius: 50%;
-      top: 3px;
-      left: 3px;
-      transition: left .2s
-    }
-
-    .tw-switch.on::after {
-      left: 19px
-    }
-
     .noise-bg {
       position: fixed;
       top: 0;
@@ -2746,7 +2650,7 @@
     <!-- NAV -->
     <nav class="nav">
       <div class="nav-brand">
-        <img src="images/Favicon Loceryl.png" alt="Loceryl da Vovó">
+        <img src="images/favicon.png" alt="Loceryl da Vovó">
         <span>Loceryl<br>da Vovó</span>
       </div>
       <a class="nav-cta" href="#oferta">
@@ -3945,30 +3849,6 @@
   </style>
 
   <!-- TWEAKS PANEL -->
-  <div id="tweaks-panel">
-    <h4>Tweaks <span class="tw-close" id="tw-close">×</span></h4>
-    <div class="tw-row">
-      <label>Cor principal</label>
-      <input type="color" id="tw-primary" value="#6B3211"
-        style="width:100%;height:32px;border:1px solid var(--beige-border);border-radius:8px;cursor:pointer">
-    </div>
-    <div class="tw-row">
-      <label>Fonte títulos</label>
-      <select id="tw-font-display">
-        <option value="'Lora', Georgia, serif">Lora</option>
-        <option value="'Playfair Display', Georgia, serif">Playfair Display</option>
-        <option value="Georgia, serif">Georgia</option>
-      </select>
-    </div>
-    <div class="tw-row tw-toggle">
-      <label>Animações</label>
-      <div class="tw-switch on" id="tw-anim"></div>
-    </div>
-    <div class="tw-row tw-toggle">
-      <label>Modo compacto</label>
-      <div class="tw-switch" id="tw-compact"></div>
-    </div>
-  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <script>
@@ -4149,48 +4029,6 @@
     });
 
     // Tweaks
-    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-      "primaryColor": "#6B3211",
-      "fontDisplay": "'Lora', Georgia, serif",
-      "animations": true,
-      "compact": true
-    }/*EDITMODE-END*/;
-
-    let T = { ...TWEAK_DEFAULTS };
-
-    function applyTweaks() {
-      document.documentElement.style.setProperty('--brown-primary', T.primaryColor);
-      document.documentElement.style.setProperty('--font-display', T.fontDisplay);
-      if (!T.animations) document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-      const pad = T.compact ? '32px 0' : '';
-      document.querySelectorAll('.section,.hero,.final-cta,.urgency-bar,.stats-bar,.showcase-section').forEach(el => el.style.padding = pad ? pad : '');
-    }
-
-    window.addEventListener('message', e => {
-      if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks-panel').style.display = 'block';
-      if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').style.display = 'none';
-    });
-    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-
-    document.getElementById('tw-primary').addEventListener('input', e => {
-      T.primaryColor = e.target.value; applyTweaks();
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { primaryColor: T.primaryColor } }, '*');
-    });
-    document.getElementById('tw-font-display').addEventListener('change', e => {
-      T.fontDisplay = e.target.value; applyTweaks();
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { fontDisplay: T.fontDisplay } }, '*');
-    });
-
-    const animSw = document.getElementById('tw-anim');
-    animSw.addEventListener('click', () => { T.animations = !T.animations; animSw.classList.toggle('on', T.animations); applyTweaks(); window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { animations: T.animations } }, '*'); });
-
-    const compSw = document.getElementById('tw-compact');
-    compSw.addEventListener('click', () => { T.compact = !T.compact; compSw.classList.toggle('on', T.compact); applyTweaks(); window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { compact: T.compact } }, '*'); });
-
-    document.getElementById('tw-close').addEventListener('click', () => { document.getElementById('tweaks-panel').style.display = 'none'; window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); });
-
-    applyTweaks();
-
     // Countdown — 2h session timer, resets each visit
     (function () {
       const KEY = 'lv_cd_end';
